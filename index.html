@@ -5,47 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ikusasalethu Secondary School</title>
-        <link rel ="icon" href="/images/logo.jpg " type="image/x-icon" >
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Animate.css for animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- Custom CSS -->
     <style>
         /* General Styling */
-     body {
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 100vh; /* Ensure full height on smaller screens */
-    box-sizing: border-box; /* Ensure padding and border are included in width and height calculations */
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100vh;
+            /* Ensure full height on smaller screens */
+            box-sizing: border-box;
+            /* Ensure padding and border are included in width and height calculations */
+        }
 
-/* Responsive typography */
-h1, h2, h3, h4, h5, h6 {
-    font-size: 100%;
-}
-
-/* Media query for smaller devices */
-@media (max-width: 768px) {
-    body {
-        font-size: 90%; /* Reduce the font size for smaller screens */
-    }
-}
-
-/* Media query for very small devices */
-@media (max-width: 480px) {
-    body {
-        font-size: 85%; /* Further reduce font size for mobile phones */
-    }
-}
-       /* Responsive typography */
+        /* Responsive typography */
         h1,
         h2,
         h3,
@@ -131,7 +112,7 @@ h1, h2, h3, h4, h5, h6 {
             font-size: 20px;
             color: green;
             font-weight: 500;
-            font-size: 15px;
+            font-size: 19px;
             /* More padding for better click area */
             transition: color 0.3s ease;
 
@@ -170,7 +151,9 @@ h1, h2, h3, h4, h5, h6 {
             color: black;
             border: none;
 
-
+            /* Light blue background on hover */
+            /* border-radius: 5px; */
+            /* Rounded corners on hover */
         }
 
         header .navbar-nav .btn {
@@ -182,34 +165,6 @@ h1, h2, h3, h4, h5, h6 {
             transition: 2s ease-in-out;
         }
 
-        /* Responsive Fixes */
-        @media (max-width: 768px) {
-            header {
-                height: auto;
-                /* Allow auto height on smaller screens */
-                padding: 10px;
-                /* Less padding on small screens */
-            }
-
-            header .navbar-brand {
-                font-size: 1.5rem;
-                /* Smaller font size on mobile */
-            }
-
-            header .navbar-nav .nav-link {
-                font-size: 14px;
-                /* Smaller font size for nav links */
-            }
-
-
-        }
-
-        /* Navbar Item Alignment In phone size */
-        .navbar-nav {
-            display: flex;
-            align-items: center;
-            /* Center items vertically in navbar */
-        }
 
 
         /* Hero Section */
@@ -233,7 +188,8 @@ h1, h2, h3, h4, h5, h6 {
             font-size: 1.5rem;
             /* Adjusted font size for hero subtitle */
         }
- /* Responsive Fixes */
+
+        /* Responsive Fixes */
         @media (max-width: 768px) {
             header {
                 height: auto;
@@ -252,8 +208,17 @@ h1, h2, h3, h4, h5, h6 {
                 /* Smaller font size for nav links */
             }
 
+            .hero-section h1 {
+                font-size: 2.5rem;
+                /* Smaller font size on mobile */
+            }
 
+            .hero-section p {
+                font-size: 1.2rem;
+                /* Smaller font size on mobile */
+            }
         }
+
 
         /* Hero Section Styling */
         /* Hero Section Styling */
@@ -290,16 +255,18 @@ h1, h2, h3, h4, h5, h6 {
             height: 100%;
             width: 100%;
         }
-/* Slide Animation */
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease, transform 1s ease; /* Add transform transition */
-}
+
+        /* Slide Animation */
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease, transform 1s ease;
+            /* Add transform transition */
+        }
 
         .slide img {
             width: 100%;
@@ -309,21 +276,25 @@ h1, h2, h3, h4, h5, h6 {
             /* Slight blur effect */
         }
 
-      /* Show the first image initially */
-.slide:nth-child(1) {
-    opacity: 1;
-    transform: translateY(0); /* Set initial position */
-}
-/* Add a class for active slides */
-.slide.active {
-    opacity: 1;
-    transform: translateY(0); /* No movement */
-}
+        /* Show the first image initially */
+        .slide:nth-child(1) {
+            opacity: 1;
+            transform: translateY(0);
+            /* Set initial position */
+        }
 
-.slide.fade {
-    opacity: 0;
-    transform: translateY(20px); /* Move slide down on fade */
-}
+        /* Add a class for active slides */
+        .slide.active {
+            opacity: 1;
+            transform: translateY(0);
+            /* No movement */
+        }
+
+        .slide.fade {
+            opacity: 0;
+            transform: translateY(20px);
+            /* Move slide down on fade */
+        }
 
         /* Overlay text container */
         .text-overlay {
@@ -369,320 +340,445 @@ h1, h2, h3, h4, h5, h6 {
         }
 
         /* Educational Philosophy Section Styling */
-.educational-philosophy {
-    background-color: #f8f9fa; /* Light background for contrast */
-    padding: 5px 0; /* Vertical padding */
-    text-align: center; /* Center text */
-    animation-duration: 0.8s; /* Animation duration */
-}
+        .educational-philosophy {
+            background-color: #f8f9fa;
+            /* Light background for contrast */
+            padding: 5px 0;
+            /* Vertical padding */
+            text-align: center;
+            /* Center text */
+            animation-duration: 0.8s;
+            /* Animation duration */
+        }
 
-.educational-philosophy .section-title {
-    font-size: 2.5rem; /* Font size for section title */
-    color: green; /* Color for the title */
-    margin-bottom: 20px; /* Space below the title */
-}
+        .educational-philosophy .section-title {
+            font-size: 2.5rem;
+            /* Font size for section title */
+            color: green;
+            /* Color for the title */
+            margin-bottom: 20px;
+            /* Space below the title */
+        }
 
-.educational-philosophy p {
-    font-size: 1.2rem; /* Font size for paragraphs */
-    color: #000; /* Dark gray color for text */
-    margin-bottom: 10px; /* Space between paragraphs */
-    line-height: 1.6; /* Increased line height for readability */
-}
+        .educational-philosophy p {
+            font-size: 1.2rem;
+            /* Font size for paragraphs */
+            color: #000;
+            /* Dark gray color for text */
+            margin-bottom: 10px;
+            /* Space between paragraphs */
+            line-height: 1.6;
+            /* Increased line height for readability */
+        }
 
-/* Animation */
-.animate__fadeInUp {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s forwards;
-}
+        /* Animation */
+        .animate__fadeInUp {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s forwards;
+        }
 
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-/* Professional Teachers Section Styling */
-.professional-teachers {
-    background-color: #ffffff; /* White background for contrast */
-    padding: 50px 0; /* Vertical padding */
-    text-align: center; /* Center text */
-}
+        /* Professional Teachers Section Styling */
+        .professional-teachers {
+            background-color: #ffffff;
+            /* White background for contrast */
+            padding: 50px 0;
+            /* Vertical padding */
+            text-align: center;
+            /* Center text */
+        }
 
-.professional-teachers .section-title {
-    font-size: 2.5rem; /* Font size for section title */
-    color: green; /* Color for the title */
-    margin-bottom: 40px; /* Space below the title */
-}
+        .professional-teachers .section-title {
+            font-size: 2.5rem;
+            /* Font size for section title */
+            color: green;
+            /* Color for the title */
+            margin-bottom: 40px;
+            /* Space below the title */
+        }
 
-/* Card Styling */
-.card {
-    border: none; /* Remove default card border */
-    transition: transform 0.3s ease; /* Smooth transition for scaling */
-}
+        /* Card Styling */
+        .card {
+            border: none;
+            /* Remove default card border */
+            transition: transform 0.3s ease;
+            /* Smooth transition for scaling */
+        }
 
-.card:hover {
-    transform: scale(1.05); /* Scale effect on hover */
-}
+        .card:hover {
+            transform: scale(1.05);
+            /* Scale effect on hover */
+        }
 
-/* Image Styling */
-.card-img-top {
-    height: 250px; /* Fixed height for images */
-    object-fit: cover; /* Ensure images cover the area */
-}
+        /* Image Styling */
+        .card-img-top {
+            height: 250px;
+            /* Fixed height for images */
+            object-fit: cover;
+            /* Ensure images cover the area */
+        }
 
-/* Animation */
-.animate__zoomIn {
-    opacity: 0;
-    transform: scale(0.8);
-    animation: zoomIn 0.8s forwards;
-}
+        /* Animation */
+        .animate__zoomIn {
+            opacity: 0;
+            transform: scale(0.8);
+            animation: zoomIn 0.8s forwards;
+        }
 
-@keyframes zoomIn {
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
+        @keyframes zoomIn {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
 
-/* Gentle Movement Animation */
-@keyframes gentleMove {
-    0% {
-        transform: translateY(0); /* Start at original position */
-    }
-    50% {
-        transform: translateY(-5px); /* Move up slightly */
-    }
-    100% {
-        transform: translateY(0); /* Return to original position */
-    }
-}
+        /* Gentle Movement Animation */
+        @keyframes gentleMove {
+            0% {
+                transform: translateY(0);
+                /* Start at original position */
+            }
 
-.gentle-move {
-    animation: gentleMove .9s ease-in-out forwards; /* Animation settings */
-}
+            50% {
+                transform: translateY(-5px);
+                /* Move up slightly */
+            }
+
+            100% {
+                transform: translateY(0);
+                /* Return to original position */
+            }
+        }
+
+        .gentle-move {
+            animation: gentleMove .9s ease-in-out forwards;
+            /* Animation settings */
+        }
 
 
 
-    .btn-details {
-        background-color: white; /* Default button color */
-        color: #000; /* Text color */
-        padding: 10px 15px; /* Padding */
-        border: none; /* Remove default border */
-        text-decoration: none; /* Remove underline */
-        transition: background-color 0.3s, transform 0.3s; /* Smooth transition for background color and scaling */
-        display: inline-block; /* Ensures proper alignment */
-        border: 1px solid black;
-    }
+        .btn-details {
+            background-color: white;
+            /* Default button color */
+            color: #000;
+            /* Text color */
+            padding: 10px 15px;
+            /* Padding */
+            border: none;
+            /* Remove default border */
+            text-decoration: none;
+            /* Remove underline */
+            transition: background-color 0.3s, transform 0.3s;
+            /* Smooth transition for background color and scaling */
+            display: inline-block;
+            /* Ensures proper alignment */
+            border: 1px solid black;
+        }
 
-    .btn-details:hover {
-        background-color: white; /* Darker shade for hover effect */
-        color: green;
-        border: 1px solid green;
-        transform: scale(1.05); /* Slight zoom effect on hover */
-    }
+        .btn-details:hover {
+            background-color: white;
+            /* Darker shade for hover effect */
+            color: green;
+            border: 1px solid green;
+            transform: scale(1.05);
+            /* Slight zoom effect on hover */
+        }
 
         .hover-effect {
-        transition: background-color 0.3s, transform 0.3s; /* Smooth transition for background color and scaling */
-    }
-
-    .hover-effect:hover {
-        transform: scale(1.05); /* Slight zoom effect on hover */
-    }
-
-    .hover-effect:hover .card-title,
-    .hover-effect:hover .card-text {
-        color: green; /* Change text color to green on hover */
-        transition: color 0.3s; /* Smooth transition for text color */
-    }
-
-   
-    .facilities-section {
-        padding: 50px 0; /* Adjust padding as needed */
-        background-color: #ffff; /* Light background for contrast */
-                padding: 60px 0; /* Adjust vertical spacing */
-
-    }
-     @keyframes fadeIn {
-        to {
-            opacity: 1; /* Fully visible */
+            transition: background-color 0.3s, transform 0.3s;
+            /* Smooth transition for background color and scaling */
         }
-    }
 
-    
-    .section-title {
-        font-size: 2.5rem; /* Adjust title size */
-        margin-bottom: 20px; /* Space below title */
-         opacity: 0; /* Start hidden for custom fade-in */
-        animation: fadeIn 3s forwards; /* Custom fade-in effect */
-    }
-
-    .image-container {
-        overflow: hidden; /* Hide overflow for smooth animation */
-        transition: transform 0.9s; /* Smooth transition for scaling */
-    }
-
-    .image-container:hover {
-        transform: scale(1.05); /* Slight zoom effect on hover */
-    }
-
-    img {
-        border-radius: 10px; /* Rounded corners for images */
-    }
-
-       /* Custom CSS for fade-in effect */
-    .fadeInImage {
-        opacity: 0; /* Start with the image hidden */
-        animation: fadeIn 10s forwards; /* Fade in over 3 seconds */
-    }
-
-    @keyframes fadeIn {
-        to {
-            opacity: 1; /* Fully visible */
+        .hover-effect:hover {
+            transform: scale(1.05);
+            /* Slight zoom effect on hover */
         }
-    }
 
-    .custom-btn {
-   background-color: white; /* Default button color */
-        color: #000; /* Text color */
-        padding: 10px 15px; /* Padding */
-        border: none; /* Remove default border */
-        /* border-radius: 30px; Rounded corners */
-        text-decoration: none; /* Remove underline */
-        transition: background-color 0.3s, transform 0.3s; /* Smooth transition for background color and scaling */
-        display: inline-block; /* Ensures proper alignment */
-        border: 1px solid black;
-}
+        .hover-effect:hover .card-title,
+        .hover-effect:hover .card-text {
+            color: green;
+            /* Change text color to green on hover */
+            transition: color 0.3s;
+            /* Smooth transition for text color */
+        }
 
-.custom-btn:hover {
-   background-color: white; /* Darker shade for hover effect */
-        color: green;
-        border: 1px solid green;
-        transform: scale(1.05); /* Slight zoom effect on hover */
-    }
-.blink-effect {
-    opacity: 1; /* Start fully visible */
-    animation: blink s infinite; /* Blink animation */
-    animation-delay: 5s; /* Start blinking after 3 seconds */
-}
 
-@keyframes blink {
-    0%, 50% {
-        opacity: 1; /* Fully visible */
-    }
-    100% {
-        opacity: 0; /* Fully transparent */
-    }
-}
+        .facilities-section {
+            padding: 50px 0;
+            /* Adjust padding as needed */
+            background-color: #ffff;
+            /* Light background for contrast */
+            padding: 60px 0;
+            /* Adjust vertical spacing */
 
-.footer {
-    background-color: #000; /* Black background */
-    color: green; /* White text color */
-    padding: 40px 0; /* Padding around the footer */
-    position: relative; /* Positioning for the inner container */
-}
+        }
 
-.footer-container {
-    max-width: 1200px; /* Max width for the footer content */
-    margin: 0 auto; /* Center the footer */
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow wrapping of items */
-    justify-content: space-between; /* Space out sections evenly */
-}
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                /* Fully visible */
+            }
+        }
 
-.footer-section {
-    flex: 1; /* Allow sections to grow */
-    padding: 20px; /* Padding for each section */
-    opacity: 0; /* Start invisible */
-    animation: slideIn 1s forwards; /* Slide in animation */
-}
 
-.footer-section:nth-child(1) { animation-delay: 0.1s; }
-.footer-section:nth-child(2) { animation-delay: 0.2s; }
-.footer-section:nth-child(3) { animation-delay: 0.3s; }
-.footer-section:nth-child(4) { animation-delay: 0.4s; }
+        .section-title {
+            font-size: 2.5rem;
+            /* Adjust title size */
+            margin-bottom: 20px;
+            /* Space below title */
+            opacity: 0;
+            /* Start hidden for custom fade-in */
+            animation: fadeIn 3s forwards;
+            /* Custom fade-in effect */
+        }
 
-.footer-section h4 {
-    border-bottom: 1px solid green; /* Underline section titles */
-    padding-bottom: 10px; /* Space below title */
-}
+        .image-container {
+            overflow: hidden;
+            /* Hide overflow for smooth animation */
+            transition: transform 0.9s;
+            /* Smooth transition for scaling */
+        }
 
-.footer-section a {
-    color:green; /* White text for links */
-    text-decoration: none; /* Remove underline */
-}
+        .image-container:hover {
+            transform: scale(1.05);
+            /* Slight zoom effect on hover */
+        }
 
-.footer-section a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
+        img {
+            border-radius: 10px;
+            /* Rounded corners for images */
+        }
 
-.social-media {
-    text-align: center; /* Center social media section */
-    margin-top: 20px; /* Margin above social media links */
-}
+        /* Custom CSS for fade-in effect */
+        .fadeInImage {
+            opacity: 0;
+            /* Start with the image hidden */
+            animation: fadeIn 10s forwards;
+            /* Fade in over 3 seconds */
+        }
 
-.social-media a {
-    color: green; /* White color for icons */
-    margin: 0 10px; /* Space between icons */
-    font-size: 24px; /* Icon size */
-    transition: transform 0.9s ease-in; /* Smooth hover transition */
-}
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                /* Fully visible */
+            }
+        }
 
-.social-media a:hover {
-    transform: scale(1.2); /* Scale up icons on hover */
-    color: white;
-}
+        .custom-btn {
+            background-color: white;
+            /* Default button color */
+            color: #000;
+            /* Text color */
+            padding: 10px 15px;
+            /* Padding */
+            border: none;
+            /* Remove default border */
+            /* border-radius: 30px; Rounded corners */
+            text-decoration: none;
+            /* Remove underline */
+            transition: background-color 0.3s, transform 0.3s;
+            /* Smooth transition for background color and scaling */
+            display: inline-block;
+            /* Ensures proper alignment */
+            border: 1px solid black;
+        }
 
-/* Animation Keyframes */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        .custom-btn:hover {
+            background-color: white;
+            /* Darker shade for hover effect */
+            color: green;
+            border: 1px solid green;
+            transform: scale(1.05);
+            /* Slight zoom effect on hover */
+        }
 
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
+        .blink-effect {
+            opacity: 1;
+            /* Start fully visible */
+            animation: blink s infinite;
+            /* Blink animation */
+            animation-delay: 5s;
+            /* Start blinking after 3 seconds */
+        }
 
-.footer-logo {
-    width: 150px; /* Set desired width for the logo */
-    margin-bottom: 20px; /* Space below the logo */
-}
+        @keyframes blink {
 
-/* Existing footer styles remain unchanged */
+            0%,
+            50% {
+                opacity: 1;
+                /* Fully visible */
+            }
 
-/* Loader Styles */
-.loader-container {
-    position: fixed; /* Fix the loader to the viewport */
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-    backdrop-filter: blur(0.5px); /* Blur effect for the background */
-    display: flex; /* Center the loader */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    z-index: 9999; /* Place the loader on top of all elements */
-    opacity: 0; /* Initially hidden */
-    visibility: hidden; /* Initially hidden */
-    transition: opacity 0.3s ease, visibility 0.3s ease; /* Transition for fade-in */
-}
+            100% {
+                opacity: 0;
+                /* Fully transparent */
+            }
+        }
 
-/* Loader Animation */
+        .footer {
+            background-color: #000;
+            /* Black background */
+            color: green;
+            /* White text color */
+            padding: 40px 0;
+            /* Padding around the footer */
+            position: relative;
+            /* Positioning for the inner container */
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            /* Max width for the footer content */
+            margin: 0 auto;
+            /* Center the footer */
+            display: flex;
+            /* Use flexbox for layout */
+            flex-wrap: wrap;
+            /* Allow wrapping of items */
+            justify-content: space-between;
+            /* Space out sections evenly */
+        }
+
+        .footer-section {
+            flex: 1;
+            /* Allow sections to grow */
+            padding: 20px;
+            /* Padding for each section */
+            opacity: 0;
+            /* Start invisible */
+            animation: slideIn 1s forwards;
+            /* Slide in animation */
+        }
+
+        .footer-section:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .footer-section:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .footer-section:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .footer-section:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .footer-section h4 {
+            border-bottom: 1px solid green;
+            /* Underline section titles */
+            padding-bottom: 10px;
+            /* Space below title */
+        }
+
+        .footer-section a {
+            color: green;
+            /* White text for links */
+            text-decoration: none;
+            /* Remove underline */
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline;
+            /* Underline on hover */
+        }
+
+        .social-media {
+            text-align: center;
+            /* Center social media section */
+            margin-top: 20px;
+            /* Margin above social media links */
+        }
+
+        .social-media a {
+            color: green;
+            /* White color for icons */
+            margin: 0 10px;
+            /* Space between icons */
+            font-size: 24px;
+            /* Icon size */
+            transition: transform 0.9s ease-in;
+            /* Smooth hover transition */
+        }
+
+        .social-media a:hover {
+            transform: scale(1.2);
+            /* Scale up icons on hover */
+            color: white;
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .footer-logo {
+            width: 150px;
+            /* Set desired width for the logo */
+            margin-bottom: 20px;
+            /* Space below the logo */
+        }
+
+        /* Existing footer styles remain unchanged */
+
+        /* Loader Styles */
+        .loader-container {
+            position: fixed;
+            /* Fix the loader to the viewport */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Semi-transparent white background */
+            backdrop-filter: blur(0.5px);
+            /* Blur effect for the background */
+            display: flex;
+            /* Center the loader */
+            justify-content: center;
+            /* Center horizontally */
+            align-items: center;
+            /* Center vertically */
+            z-index: 9999;
+            /* Place the loader on top of all elements */
+            opacity: 0;
+            /* Initially hidden */
+            visibility: hidden;
+            /* Initially hidden */
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            /* Transition for fade-in */
+        }
+
+        /* Loader Animation */
         .loader {
             border: 3px solid #f3f3f3;
             /* Light gray border */
@@ -733,6 +829,9 @@ h1, h2, h3, h4, h5, h6 {
         }
 
         /* Underline hover effect for main nav links */
+
+
+
 
         /* Underline hover effect for dropdown items */
         .dropdown-menu .dropdown-item::after {
@@ -787,287 +886,189 @@ h1, h2, h3, h4, h5, h6 {
                 display: none;
             }
 
-    /* Adjust section paddings */
-    .section-title {
-        font-size: 20px;
-        text-align: center;
-    }
+            /* Adjust section paddings */
+            .section-title {
+                font-size: 20px;
+                text-align: center;
+            }
 
-    .card {
-        margin-bottom: 20px; /* Add space between cards */
-    }
+            .card {
+                margin-bottom: 20px;
+                /* Add space between cards */
+            }
 
-    .container {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+            .container {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
 
-    /* Adjust hero section */
-    /* .hero-section {
+            /* Adjust hero section */
+            /* .hero-section {
         padding: 20px;
         text-align: center;
     } */
 
-    .hero-section h1 {
-        font-size: 24px;
-    }
+            .hero-section h1 {
+                font-size: 24px;
+            }
 
-    .hero-section p {
-        font-size: 16px;
-    }
+            .hero-section p {
+                font-size: 16px;
+            }
 
-    .hero-section .cust-btn {
-        font-size: 16px;
-        padding: 10px 20px;
-    }
+            .hero-section .cust-btn {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
 
-    /* Image slider */
-   
-
-    /* Footer styling */
-    .footer-container {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .footer-section {
-        width: 100%; /* Stack footer sections on top of each other */
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .footer-section h4 {
-        font-size: 18px;
-    }
-
-    .social-media a {
-        font-size: 18px;
-        margin: 0 10px;
-    }
-
-    /* Adjust image in world-class facilities section */
-    .image-container img {
-        width: 100%; /* Ensure the image scales well on mobile */
-        height: auto;
-    }
-}
-
-.logo-container {
-    margin-top: 20px; /* Apply top margin */
-    display: flex; /* Center the logo within the container */
-    justify-content: center; /* Center horizontally */
-}
-
-.animated-logo {
-    max-width: 100%; /* Make the logo responsive */
-    height: auto; /* Maintain aspect ratio */
-    /* Optional: Add any animation styles you want */
-    animation: fadeIn 0.5s; /* Example animation */
-}
-
-/* Example animation keyframes */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
+            /* Image slider */
 
 
-/* Bounce Animation */
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
-}
+            /* Footer styling */
+            .footer-container {
+                display: flex;
+                flex-wrap: wrap;
+            }
 
+            .footer-section {
+                width: 100%;
+                /* Stack footer sections on top of each other */
+                margin-bottom: 20px;
+                text-align: center;
+            }
 
+            .footer-section h4 {
+                font-size: 18px;
+            }
 
+            .social-media a {
+                font-size: 18px;
+                margin: 0 10px;
+            }
 
-
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
-
-.close-button {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close-button:hover,
-.close-button:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-
-}
-
-
-.form-section {
-            display: none;
+            /* Adjust image in world-class facilities section */
+            .image-container img {
+                width: 100%;
+                /* Ensure the image scales well on mobile */
+                height: auto;
+            }
         }
-        .form-section.active {
-            display: block;
-        }
-        h2 {
-            text-align: center;
-            color: #333;
-        }
-        label {
-            display: block;
-            margin-top: 10px;
-        }
-        input[type="text"],
-input[type="email"],
-input[type="file"],
-input[type="number"],
-input[type="date"],
-select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    /* Optional: Add background color and font for better appearance */
-    background-color: #fff;
-    font-family: inherit; /* Use the same font as the rest of the form */
-    font-size: inherit; /* Use the same font size as the rest of the form */
-}
 
-/* Optional: For better appearance on focus */
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="file"]:focus,
-input[type="number"]:focus,
-input[type="date"]:focus,
-select:focus {
-    border-color: #007BFF; /* Change border color on focus */
-    outline: none; /* Remove default outline */
-}
-
-        .button {
-            padding: 10px 20px;
-            border: none;
-            color: white;
-            cursor: pointer;
-            border-radius: 5px;
+        .logo-container {
             margin-top: 20px;
-        }
-        .next {
-            background-color: green;
-        }
-        .prev {
-            background-color: gray;
-        }
-        .save {
-            background-color: yellow;
-            color: black;
-        }
-        .button-container {
+            /* Apply top margin */
             display: flex;
-            justify-content: space-between;
+            /* Center the logo within the container */
+            justify-content: center;
+            /* Center horizontally */
         }
-Fade In Of Modal
 
-        .modal-content {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out; /* Controls the duration of the fade-in */
-}
+        .animated-logo {
+            max-width: 100%;
+            /* Make the logo responsive */
+            height: auto;
+            /* Maintain aspect ratio */
+            /* Optional: Add any animation styles you want */
+            animation: fadeIn 0.5s;
+            /* Example animation */
+        }
 
-.modal-content.active {
-    opacity: 1; /* Fully visible */
-}
-        
+        /* Example animation keyframes */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+
+        /* Bounce Animation */
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
+        }
     </style>
 </head>
 
 <body>
-<div id="loader" class="loader-container">
-    <div class="loader"></div>
-</div>
+    <div id="loader" class="loader-container">
+        <div class="loader"></div>
+    </div>
 
-<header class="fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="./images/logo.jpg" alt="School Logo" style="height: 100px; width:100px;">
-                <span class="d-none d-md-inline">
-                    <h6 style="font-size: 18px;">Ikusasalethu Secondary School</h6>
-                </span> <!-- Text only visible on medium and larger screens -->
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link animate__animated animate__slideInRight" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link animate__animated animate__slideInRight" href="Gallery.html">Gallery</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle animate__animated animate__slideInRight" href="#"
-                            id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            About Us <i class="fas fa-angle-down" style="font-size: 15px;"></i> <!-- Dropdown Icon -->
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-                            <li><a class="dropdown-item" href="About.html">About Us</a></li>
-                            <li><a class="dropdown-item" href="Curriculum.html">Curriculum</a></li>
-                            <li><a class="dropdown-item" href="#staff">Staff</a></li>
-                            <li><a class="dropdown-item" href="Community.html">Community Social</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown animate__animated animate__slideInRight">
-                        <a class="nav-link dropdown-toggle" href="#" id="eventsDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Events & Activities <i class="fas fa-angle-down" style="font-size: 15px;"></i>
-                            <!-- Dropdown Icon -->
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="eventsDropdown">
-                            <li><a class="dropdown-item" href="#fundraising">Fundraising</a></li>
-                            <li><a class="dropdown-item" href="#awards">Awards</a></li>
-                            <li><a class="dropdown-item" href="#matricdance">Matric Dance</a></li>
-                            <li><a class="dropdown-item" href="#extracurricular">Extra Curricular Activities</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn animate__animated animate__slideInRight" id="applyNowBtn">Apply Now</a>
-                    </li>
-                </ul>
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./images/logo.jpg" alt="School Logo" style="height: 100px; width:100px;">
+                    <span class="d-none d-md-inline">
+                        <h6 style="font-size: 18px;">Ikusasalethu Secondary School</h6>
+                    </span> <!-- Text only visible on medium and larger screens -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link animate__animated animate__slideInRight" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link animate__animated animate__slideInRight" href="#gallery">Gallery</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle animate__animated animate__slideInRight" href="#"
+                                id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                About Us <i class="fas fa-angle-down" style="font-size: 15px;"></i>
+                                <!-- Dropdown Icon -->
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                                <li><a class="dropdown-item" href="About.html">About Us</a></li>
+                                <li><a class="dropdown-item" href="#curriculum">Curriculum</a></li>
+                                <li><a class="dropdown-item" href="#staff">Staff</a></li>
+                                <li><a class="dropdown-item" href="#community">Community Social</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown animate__animated animate__slideInRight">
+                            <a class="nav-link dropdown-toggle" href="#" id="eventsDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Events & Activities <i class="fas fa-angle-down" style="font-size: 15px;"></i>
+                                <!-- Dropdown Icon -->
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="eventsDropdown">
+                                <li><a class="dropdown-item" href="#fundraising">Fundraising</a></li>
+                                <li><a class="dropdown-item" href="#awards">Awards</a></li>
+                                <li><a class="dropdown-item" href="#matricdance">Matric Dance</a></li>
+                                <li><a class="dropdown-item" href="#extracurricular">Extra Curricular Activities</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn animate__animated animate__slideInRight" href="Test.html">Apply
+                                Now</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero-section">
@@ -1088,679 +1089,215 @@ Fade In Of Modal
         <div class="container text-overlay">
             <h1 class="animate__animated animate__fadeInDown">Ikusasalethu Secondary School</h1>
             <p class="animate__animated animate__fadeInUp">Build Tomorrow Today</p>
-            <a href="Apply.html" class="cust-btn animate__animated animate__fadeInUp">Apply Now</a>
-        
+            <a href="#apply" class="cust-btn animate__animated animate__fadeInUp">Apply Now</a>
         </div>
     </section>
 
     <!-- Educational Philosophy Section -->
-<section id="philosophy" class="educational-philosophy" data-aos="fade-up" style="background-color: #ffffff;">
+    <section id="philosophy" class="educational-philosophy animate__animated animate__fadeInUp">
         <div class="container">
-            <h2 class="section-title" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Educational Philosophy</h2>
+            <h2 class="section-title" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                Educational Philosophy</h2>
             <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-                Our mission is to foster the growth of the “whole child” by supporting their academic, cultural, physical,
-                emotional, and spiritual development. We aim to help pupils reach their fullest potential, encouraging them
+                Our mission is to foster the growth of the “whole child” by supporting their academic, cultural,
+                physical,
+                emotional, and spiritual development. We aim to help pupils reach their fullest potential, encouraging
+                them
                 to think critically, act responsibly, and make wise choices.
             </p>
             <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-                We believe that a secure and joyful environment is essential for meaningful relationships between pupils,
-                teachers, and peers. By recognizing the unique personality of each student, we strive to create a holistic
+                We believe that a secure and joyful environment is essential for meaningful relationships between
+                pupils,
+                teachers, and peers. By recognizing the unique personality of each student, we strive to create a
+                holistic
                 learning experience that is both exciting and stimulating. Through this process, pupils will grow in
                 understanding, confidence, self-discipline, and sensitivity.
             </p>
             <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
                 We understand that engaged children are happier; the more they are involved in their learning, the more
                 fulfillment they experience. Consequently, well-behaved children stem from happiness rather than the
-                reverse; they are not well-behaved because they are happy, but happy because they feel valued and fulfilled.
+                reverse; they are not well-behaved because they are happy, but happy because they feel valued and
+                fulfilled.
             </p>
             <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-                To achieve our goals, we rely on the positive support of parents in all our endeavors. A solid foundation of
+                To achieve our goals, we rely on the positive support of parents in all our endeavors. A solid
+                foundation of
                 unconditional love at home is crucial for children as they explore the wider world. By upholding shared
-                values, we can collectively provide our children with a strong foundation that will support them throughout
+                values, we can collectively provide our children with a strong foundation that will support them
+                throughout
                 their lives.
             </p>
         </div>
     </section>
 
-<!-- Professional Teachers Section -->
-<section id="teachers" class="professional-teachers" data-aos="fade-up">
-    <div class="container">
-        <h2 class="section-title">Ikusasalethu Secondary School</h2>
-        <p>"Build Tomorrow Today"</p>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="card">
-                    <img src="./images/proffesion.jpg" class="card-img-top" alt="Teacher 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Professional Teachers</h5>
-                        <p class="card-text">Our team of professional teachers...</p>
-                        <a href="#teacher3-details" class="btn btn-details">View Details</a>
+    <!-- Professional Teachers Section -->
+    <section id="teachers" class="professional-teachers animate__animated animate__fadeInUp">
+        <div class="container">
+            <h2 class="section-title">Ikusasalethu Secondary School</h2>
+            <p>"Build Tomorrow Today"</p>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card hover-effect animate__animated animate__fadeInUp">
+                        <!-- Use fadeInUp for card animation -->
+                        <img src="./images/proffesion.jpg"
+                            class="card-img-top animate__animated animate__delay-1s gentle-move" alt="Teacher 1">
+                        <!-- Replace with your image path -->
+                        <div class="card-body">
+                            <h5 class="card-title"
+                                style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                Professional Teachers</h5>
+                            <p class="card-text"
+                                style="font-size: 15px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                Our team of professional teachers at Ikusasalethu Secondary School is dedicated to
+                                providing an
+                                exceptional educational experience.They believe in nurturing individual potential
+                                through engaging lessons
+                                that promote critical thinking, creativity, and a love for learning. Our teachers are
+                                committed to continuous
+                                professional development, ensuring they remain at the forefront of educational best
+                                practices to inspire and empower
+                                our students.</p>
+
+                            <a href="#teacher3-details" class="btn btn-details" style="margin-top: 15px;"><i
+                                    class="fas fa-info-circle"></i> View Details
+                            </a></a> <!-- Changed class -->
+                            <!-- Button for more details -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card hover-effect animate__animated animate__fadeInUp">
+                        <!-- Use fadeInUp for card animation -->
+                        <img src="./images/View1.jpg "
+                            class="card-img-top animate__animated animate__delay-2s gentle-move" alt="Teacher 2">
+                        <!-- Replace with your image path -->
+                        <div class="card-body">
+                            <h5 class="card-title"
+                                style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                Learning</h5>
+                            <p class="card-text"
+                                style="font-size: 15px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                At Ikusasalethu Secondary School, we believe in fostering a dynamic learning environment
+                                where
+                                students are encouraged to explore, engage, and excel. Our qualified teachers bring a
+                                wealth of experience,
+                                utilizing innovative teaching methods and technologies to cater to diverse learning
+                                styles. We emphasize critical
+                                thinking, creativity, and collaboration, preparing our students not only for academic
+                                success but also for life
+                                beyond the classroom.</p>
+
+                            <a href="#teacher3-details" class="btn btn-details"
+                                style="margin-top: 15px;"">    <i class=" fas fa-info-circle"></i> View Details
+                            </a> <!-- Changed class -->
+                            <!-- Button for more details -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card hover-effect animate__animated animate__fadeInUp">
+                        <!-- Use fadeInUp for card animation -->
+                        <img src="./images/academics.jpg"
+                            class="card-img-top animate__animated animate__delay-3s gentle-move" alt="Teacher 3">
+                        <!-- Replace with your image path -->
+                        <div class="card-body">
+                            <h5 class="card-title"
+                                style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                Academics</h5>
+                            <p class="card-text"
+                                style="font-size: 15px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                At Ikusasalethu Secondary School, our academic team is dedicated to fostering a robust
+                                learning
+                                environment that prioritizes excellence and innovation. Each teacher is highly
+                                qualified, holding advanced degrees
+                                in their respective fields, with a wealth of experience in delivering curriculum that is
+                                both challenging and
+                                inspiring. Our educators employ diverse teaching methodologies to cater to different
+                                learning styles, ensuring that
+                                every student can engage deeply with the material.</p>
+
+                            <a href="Academics.html" class="btn btn-details"><i class="fas fa-info-circle"></i> View
+                                Details
+                            </a></a> <!-- Changed class -->
+                            <!-- Button for more details -->
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="card">
-                    <img src="./images/View1.jpg" class="card-img-top" alt="Teacher 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Learning</h5>
-                        <p class="card-text">At Ikusasalethu Secondary School...</p>
-                        <a href="#teacher3-details" class="btn btn-details">View Details</a>
+        </div>
+    </section>
+
+
+    <!-- World Class Facilities Section -->
+    <section id="facilities" class="facilities-section" data-aos="fade-up">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <h2 class="section-title"
+                        style="color: green; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                        "Build Tomorrow Today"</h2>
+                    <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                        At Ikusasalethu Secondary School, we believe in our mission to promote growth of the ‘whole
+                        child’.
+                        We have therefore invested heavily in our infrastructure to aid this mission.
+                    </p>
+                    <a href="Apply.html" class="btn custom-btn">Apply Now</a>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="image-container animate__animated animate__fadeInLeft"
+                        style="margin-top: 20px; margin-left: 0px; height: 300px; width: 300px;">
+                        <img src="./images/badge.jpg" class="img-fluid blink-effect" alt="School Facilities">
+                        <!-- Replace with your image path -->
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="card">
-                    <img src="./images/academics.jpg" class="card-img-top" alt="Teacher 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Academics</h5>
-                        <p class="card-text">At Ikusasalethu Secondary School...</p>
-                        <a href="Academics.html" class="btn btn-details">View Details</a>
-                    </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="footer" data-aos="fade-up">
+        <div class="footer-container">
+            <div class="footer-section" data-aos="fade-up">
+                <h4>Get in Touch</h4>
+                <p>Email: info@ikusasalethu.co.za</p>
+                <p>Phone: +27 123 456 789</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#facilities">Facilities</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section" data-aos="fade-up">
+                <h4>Office Hours</h4>
+                <p>Monday - Friday: 8 AM - 4 PM</p>
+                <p>Saturday: 9 AM - 1 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+            <div class="footer-section" data-aos="fade-up">
+                <div class="logo-container">
+                    <img src="./images/logo2.jpg" alt="School Logo" class="animated-logo">
                 </div>
             </div>
         </div>
-    </div>
-</section>
+        <div class="txt">
 
-
-<!-- World Class Facilities Section -->
-<section id="facilities" class="facilities-section" data-aos="fade-up">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6" data-aos="fade-up">
-                <h2 class="section-title" style="color: green; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">"Build Tomorrow Today"</h2>
-                <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-                    At Ikusasalethu Secondary School, we believe in our mission to promote growth of the ‘whole child’.
-                    We have therefore invested heavily in our infrastructure to aid this mission.
-                </p>
-                <a href="Apply.html" id="applyNowBtn" class="btn custom-btn">Apply Now</a>
-
-             
-             
-                
-
-            </div>
-            <div class="col-lg-6" data-aos="fade-left">
-                <div class="image-container" style="margin-top: 20px; margin-left: 0px; height: 300px; width: 300px;">
-                    <img src="./images/badge.jpg" class="img-fluid blink-effect" alt="School Facilities">
-                    <!-- Replace with your image path -->
-                </div>
-            </div>
-        </div>
-    </div>
-    
-</section>
-
-
-
-<!-- Footer Section -->
-<!-- Footer Section -->
-<footer class="footer" data-aos="fade-up">
-    <div class="footer-container">
-        <div class="footer-section" data-aos="fade-up">
-            <h4>Get in Touch</h4>
-            <p>Email: info@ikusasalethu.co.za</p>
-            <p>Phone: +27 123 456 789</p>
-        </div>
-        <div class="footer-section" data-aos="fade-up">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="Home.html">Home</a></li>
-                <li><a href="About.html">About Us</a></li>
-                <li><a href="#facilities">Facilities</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-        <div class="footer-section" data-aos="fade-up">
-            <h4>Office Hours</h4>
-            <p>Monday - Friday: 8 AM - 4 PM</p>
-            <p>Saturday: 9 AM - 1 PM</p>
-            <p>Sunday: Closed</p>
-        </div>
-        <div class="footer-section" data-aos="fade-up">
-            <div class="logo-container">
-                <img src="./images/logo2.jpg" alt="School Logo" class="animated-logo" style="border-radius: 10px;">
-            </div>
-        </div>
-    </div>
-    <div class="txt" data-aos="fade-up">
-        <h3 style="text-align: center;">Ikusasalethu Secondary School</h3>
-    </div>
-    <div class="social-media" data-aos="">
-        <a href="https://www.facebook.com/profile.php?id=100063336094041" target="_blank"><i
-                class="fab fa-facebook"></i></a>
-        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-    </div>
-    
-</footer>
-
-
-<div id="applyModal" class="modal">
-    <div class="modal-content">
-        <span class="close" id="closeModal">&times;</span>
-        <h2>Student Application Form</h2>
-
-        <!-- Parent/Guardian Form Section -->
-        <div id="parentForm" class="form-section active">
-            <h3>Parent/Guardian Information</h3>
-            <form id="parentFormData">
-                <label for="parentName">Parent/Guardian Name</label>
-                <input type="text" id="parentName" name="parentName" placeholder="full name" required>
-
-                <label for="parentID">ID Number</label>
-                <input type="number" id="parentID" name="parentID" required>
-
-                <label for="parentEmail">Email</label>
-                <input type="email" id="parentEmail" name="parentEmail" placeholder="e.g. parent@example.com" required>
-
-                <label for="parentPhone">Phone Number</label>
-                <input type="text" id="parentPhone" name="parentPhone" placeholder="xxx xxx xxxx" required>
-
-                <label for="Paddress">Address</label>
-                <input type="text" id="Paddress" name="Paddress" placeholder="Home Address" required>
-
-                <label for="parentDoc">Upload Supporting Document (ID)</label>
-                <input type="file" id="parentDoc" name="parentDoc" accept="image/*" required>
-
-                <div class="button-container">
-                    <button type="button" class="button next" onclick="validateParentForm()">Next</button>
-                </div>
-            </form>
-            <div id="formErrors" style="color: red; margin-top: 10px;"></div>
+            <h3 style="text-align: center;">Ikusasalethu Secondary School</h3>
         </div>
 
-        <!-- Learner Form Section -->
-        <div id="learnerForm" class="form-section">
-            <h3>Learner Information</h3>
-            <form id="learnerFormData">
-                <label for="Fname">First Name</label>
-                <input type="text" id="Fname" name="Fname" required>
-
-                <label for="Sname">Second Name</label>
-                <input type="text" id="Sname" name="Sname" placeholder="optional">
-
-                <label for="Surname">Surname</label>
-                <input type="text" id="Surname" name="Surname" required>
-
-                <label for="LearnerID">ID Number</label>
-                <input type="number" id="LearnerID" name="LearnerID" required onblur="checkLearnerID()">
-                <div id="learnerIdMessage"></div>
-
-                <label for="learnerDob">Date of Birth</label>
-                <input type="date" id="learnerDob" name="learnerDob" required>
-
-                <label for="learnerGrade">Grade Applying For</label>
-                <select id="learnerGrade" name="learnerGrade" required>
-                    <option value="" disabled selected>Select a grade</option>
-                    <option value="4">Grade 4</option>
-                    <option value="5">Grade 5</option>
-                    <option value="6">Grade 6</option>
-                    <option value="7">Grade 7</option>
-                </select>
-
-                <label for="reportCard">Upload Report</label>
-                <input type="file" id="reportCard" name="reportCard" accept="image/*" required>
-
-                <label for="previousSchoolRemoval">Removal from Previous School</label>
-                <input type="file" id="previousSchoolRemoval" name="previousSchoolRemoval" accept="image/*" required>
-
-                <label for="learnerIDCard">Learner ID Document</label>
-                <input type="file" id="learnerIDCard" name="learnerIDCard" accept="image/*" required>
-
-                <div class="button-container">
-                    <button type="button" class="button prev" onclick="showPrevSection('parentForm')">Previous</button>
-                    <button type="button" class="button next" id="nextButton" onclick="validateLearnerForm()"
-                        disabled>Next</button>
-                </div>
-            </form>
-            <div id="learnerFormErrors" style="color: red; margin-top: 10px;"></div>
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
-
-        <!-- Email & Tracking Section -->
-        <div id="emailSection" class="form-section">
-            <h3>Track Your Application</h3>
-            <form id="trackingForm">
-                <label for="trackingEmail">Enter Your Email for Tracking Status</label>
-                <input type="email" id="trackingEmail" name="trackingEmail" required>
-
-                <div class="button-container">
-                    <button type="button" class="button prev" onclick="showPrevSection('learnerForm')">Previous</button>
-                    <button type="submit" class="button save">Save & Submit</button>
-                </div>
-            </form>
-
-        </div>
-            <script>
-                // Handle form submission
-                document.getElementById("trackingForm").addEventListener("submit", async function (event) {
-                    event.preventDefault(); // Prevent default form submission
-
-                    const email = document.getElementById("trackingEmail").value;
-
-                    // Validate email format
-                    if (!validateEmail(email)) {
-                        alert("Please enter a valid email address.");
-                        return;
-                    }
-
-                    // Retrieve parentData and learnerData from sessionStorage
-                    const parentData = JSON.parse(sessionStorage.getItem('parentData')) || {};
-                    const learnerData = JSON.parse(sessionStorage.getItem('learnerData')) || {};
-
-                    // Check if parentData and learnerData contain the necessary fields
-                    const { parentId, parentDoc } = parentData;
-                    const { learnerId, reportCard, previousSchoolRemoval, learnerIDCard } = learnerData;
-
-                    if (!parentId || !learnerId) {
-                        alert("Parent ID or Learner ID is missing. Please ensure that both forms have been filled out correctly.");
-                        return;
-                    }
-
-                    // Fetch file inputs from learner form
-                    const reportCardFile = document.getElementById('reportCard').files[0];
-                    const previousSchoolRemovalFile = document.getElementById('previousSchoolRemoval').files[0];
-                    const learnerIDCardFile = document.getElementById('learnerIDCard').files[0];
-                    const parentDocFile = document.getElementById('parentDoc').files[0];
-
-
-
-                    // Create FormData object
-                    const formData = new FormData();
-                    formData.append("trackingEmail", email);
-                    formData.append("parentId", parentId);
-                    formData.append("learnerId", learnerId);
-
-                    // Append files to FormData
-                    if (parentDocFile) {
-                        formData.append("parentDoc", parentDocFile); // Append the actual file
-                    }
-                    if (reportCardFile) {
-                        formData.append("reportCard", reportCardFile); // Append the actual file
-                    }
-                    if (previousSchoolRemovalFile) {
-                        formData.append("previousSchoolRemoval", previousSchoolRemovalFile); // Append the actual file
-                    }
-                    if (learnerIDCardFile) {
-                        formData.append("learnerIDCard", learnerIDCardFile); // Append the actual file
-                    }
-
-                    // Append parentData and learnerData as JSON strings
-                    formData.append("parentData", JSON.stringify(parentData));
-                    formData.append("learnerData", JSON.stringify(learnerData));
-
-                    // Send the form data to the server
-                    try {
-                        const response = await fetch("https://obscure-space-yodel-69gwwxxr64pg3r6g9-5000.app.github.dev/register", {
-                            method: "POST",
-                            body: formData // Send FormData directly
-                        });
-
-                        const data = await response.json();
-                        if (response.ok) {
-                            sessionStorage.clear(); // Clear session storage
-                            document.getElementById("parentFormData").reset();
-                            document.getElementById("learnerFormData").reset();
-                            document.getElementById("trackingForm").reset();
-                            window.location.href = 'thank.html';
-                        } else {
-                            alert(`Error: ${data.message}`);
-                        }
-                    } catch (error) {
-                        console.error("Error:", error);
-                    }
-                });
-
-
-
-
-                // Function to show the next section
-                function showNextSection(sectionId) {
-                    const sections = document.querySelectorAll('.form-section');
-                    sections.forEach(section => section.classList.remove('active'));
-                    document.getElementById(sectionId).classList.add('active');
-
-                    if (sectionId === 'learnerForm') {
-                        loadParentData(); // Load parent data when showing learner form
-                    } else if (sectionId === 'emailSection') {
-                        setTrackingEmail(); // Set tracking email when showing email section
-                    }
-                }
-                // Helper function to validate email format
-                function validateEmail(email) {
-                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    return emailPattern.test(email);
-                }
-
-                // Function to validate parent form
-                function validateParentForm() {
-                    const errorContainer = document.getElementById('formErrors');
-                    errorContainer.innerHTML = ''; // Clear any previous errors
-
-                    // Get form field values
-                    const parentName = document.getElementById('parentName').value.trim();
-                    const parentEmail = document.getElementById('parentEmail').value.trim();
-                    const parentPhone = document.getElementById('parentPhone').value.trim();
-                    const Paddress = document.getElementById('Paddress').value.trim();
-                    const parentID = document.getElementById('parentID').value.trim();
-
-                    // Get file elements from DOM
-                    const parentDoc = document.getElementById('parentDoc').files[0]; // Get the file object
-
-
-                    let isValid = true;
-
-                    // Validate Parent/Guardian Name
-                    if (!parentName) {
-                        errorContainer.innerHTML += 'Please enter the Parent/Guardian Name.<br>';
-                        isValid = false;
-                    }
-
-                    // Validate email
-                    if (!parentEmail || !validateEmail(parentEmail)) {
-                        errorContainer.innerHTML += 'Please enter a valid email address.<br>';
-                        isValid = false;
-                    }
-
-                    // Validate Phone Number
-                    if (!parentPhone) {
-                        errorContainer.innerHTML += 'Please enter the Phone Number.<br>';
-                        isValid = false;
-                    }
-
-                    // Validate Address
-                    if (!Paddress) {
-                        errorContainer.innerHTML += 'Please enter the Address.<br>';
-                        isValid = false;
-                    }
-
-                    // Validate if document is uploaded
-                    if (!parentDoc) {
-                        errorContainer.innerHTML += 'Please upload the Supporting Document (ID).<br>';
-                        isValid = false;
-                    }
-
-                    // Validate 13-digit ID Number
-                    if (!/^\d{13}$/.test(parentID)) {
-                        errorContainer.innerHTML += 'ID Number must be a 13-digit number.<br>';
-                        isValid = false;
-                    }
-                    const allowedFileTypes = ['image/jpeg', 'image/png', 'image/jpg'];
-
-
-
-                    // Check if any file is not an image
-                    if ((parentDoc && !allowedFileTypes.includes(parentDoc.type))) {
-
-                        errorContainer.innerHTML += 'Please upload only images (jpg, png, jpeg).';
-                        isValid = false;
-                    }
-
-                    // If form is valid, proceed to the next section
-                    if (isValid) {
-                        // Store parent data in a single object
-                        const parentData = {
-                            parentId: parentID,
-                            parentName: parentName,
-                            parentEmail: parentEmail,
-                            parentPhone: parentPhone,
-                            parentDoc: parentDoc,
-                            Paddress: Paddress
-                        };
-
-                        // Save parentData to sessionStorage
-                        sessionStorage.setItem('parentData', JSON.stringify(parentData));
-
-                        // Clear error messages
-                        errorContainer.innerHTML = '';
-
-                        // Proceed to next section
-                        showNextSection('learnerForm');
-                    }
-                }
-
-
-
-                function checkLearnerID() {
-                    const learnerId = document.getElementById('LearnerID').value;
-
-                    if (learnerId) {
-                        fetch('https://obscure-space-yodel-69gwwxxr64pg3r6g9-5000.app.github.dev/check-learner-id', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                            body: JSON.stringify({ learnerId }),
-                        })
-                            .then(response => response.json())
-                            .then(data => {
-                                const messageDiv = document.getElementById('learnerIdMessage');
-                                const nextButton = document.getElementById('nextButton');
-
-                                if (data.exists) {
-                                    // Display message if learnerID exists and show the status
-                                    messageDiv.innerHTML = `The learner ID is already applied. Current status: ${data.status}`;
-                                    messageDiv.style.color = 'red';
-
-                                    // Call function to invalidate the form and disable Next button
-                                    invalidateLearnerForm();
-                                } else {
-                                    // Clear the message if learnerID doesn't exist
-                                    messageDiv.innerHTML = '';
-
-                                    // Enable the Next button if learnerID is valid
-                                    nextButton.disabled = false;
-                                }
-                            })
-                            .catch(error => {
-                                console.error('Error:', error);
-                            });
-                    } else {
-                        // Disable the Next button if learnerId is empty
-                        document.getElementById('nextButton').disabled = true;
-                    }
-                }
-
-                // Function to invalidate the learner form
-                function invalidateLearnerForm() {
-                    const errorContainer = document.getElementById('learnerFormErrors');
-                    errorContainer.innerHTML = 'The learner ID already exists. Please check and try again.';
-                    document.getElementById('nextButton').disabled = true; // Disable the Next button
-                }
-
-                // Function to validate learner form
-                function validateLearnerForm() {
-                    const errorContainer = document.getElementById('learnerFormErrors');
-                    errorContainer.innerHTML = ''; // Clear previous errors
-
-                    const Fname = document.getElementById('Fname').value.trim();
-                    const Sname = document.getElementById('Sname').value.trim();
-                    const Surname = document.getElementById('Surname').value.trim();
-                    const LearnerID = document.getElementById('LearnerID').value.trim();
-                    const learnerDob = document.getElementById('learnerDob').value.trim();
-                    const learnerGrade = document.getElementById('learnerGrade').value.trim();
-
-                    const reportCard = document.getElementById('reportCard').files[0];
-                    const previousSchoolRemoval = document.getElementById('previousSchoolRemoval').files[0];
-                    const learnerIDCard = document.getElementById('learnerIDCard').files[0];
-
-                    let isValid = true;
-
-                    if (!Fname) {
-                        errorContainer.innerHTML += 'Please enter the First Name.<br>';
-                        isValid = false;
-                    }
-
-                    if (!Surname) {
-                        errorContainer.innerHTML += 'Please enter the Surname.<br>';
-                        isValid = false;
-                    }
-
-                    if (!/^\d{13}$/.test(LearnerID)) {
-                        errorContainer.innerHTML += 'Learner ID Number must be a 13-digit number.<br>';
-                        isValid = false;
-                    }
-
-                    if (!learnerDob) {
-                        errorContainer.innerHTML += 'Please select the Date of Birth.<br>';
-                        isValid = false;
-                    }
-
-                    if (!learnerGrade) {
-                        errorContainer.innerHTML += 'Please select the Grade.<br>';
-                        isValid = false;
-                    }
-
-                    if (!reportCard) {
-                        errorContainer.innerHTML += 'Please upload the Report.<br>';
-                        isValid = false;
-                    }
-
-                    if (!previousSchoolRemoval) {
-                        errorContainer.innerHTML += 'Please upload the Removal Document.<br>';
-                        isValid = false;
-                    }
-
-                    if (!learnerIDCard) {
-                        errorContainer.innerHTML += 'Please upload the Learner ID Document.<br>';
-                        isValid = false;
-                    }
-
-                    const allowedFileTypes = ['image/jpeg', 'image/png', 'image/jpg'];
-
-                    if ((reportCard && !allowedFileTypes.includes(reportCard.type)) ||
-                        (previousSchoolRemoval && !allowedFileTypes.includes(previousSchoolRemoval.type)) ||
-                        (learnerIDCard && !allowedFileTypes.includes(learnerIDCard.type))) {
-                        errorContainer.innerHTML += 'Please upload only images (jpg, png, jpeg).<br>';
-                        isValid = false;
-                    }
-                    // If the form is valid, proceed to the next section
-                    if (isValid) {
-                        // Store learner data in a single object
-                        const learnerData = {
-                            learnerId: LearnerID,
-                            Fname: Fname,
-                            Sname: Sname,
-                            Surname: Surname,
-                            learnerDob: learnerDob,
-                            learnerGrade: learnerGrade,
-                            reportCard: reportCard,
-                            previousSchoolRemoval: previousSchoolRemoval,
-                            learnerIDCard: learnerIDCard,
-                        };
-                        sessionStorage.setItem('learnerData', JSON.stringify(learnerData)); // Store as a JSON string
-                        showNextSection('emailSection');
-                    }
-                }
-
-
-                // Function to load parent data from sessionStorage
-                function loadParentData() {
-                    // Retrieve parent data from sessionStorage
-                    const parentData = JSON.parse(sessionStorage.getItem('parentData'));
-
-                    if (parentData) {
-                        // Populate fields with stored parent data
-                        document.getElementById('parentName').value = parentData.parentName;
-                        document.getElementById('parentEmail').value = parentData.parentEmail;
-                        document.getElementById('parentPhone').value = parentData.parentPhone;
-                        document.getElementById('Paddress').value = parentData.Paddress;
-                        document.getElementById('parentID').value = parentData.parentId;  // Added this to populate the parentID
-                    } else {
-                        console.error('No parent data found in sessionStorage');
-                    }
-                }
-
-
-
-                // Function to set the tracking email when moving to the email section
-                function setTrackingEmail(email) {
-                    const trackingEmailInput = document.getElementById('trackingEmail');
-                    trackingEmailInput.value = email; // Set the email in the input field
-                }
-
-                // Call this function with the parent's email when transitioning to the email section
-                function showNextSection(sectionId) {
-                    const parentEmail = document.getElementById('parentEmail').value; // Get the parent's email from the parent form
-                    if (sectionId === 'emailSection') {
-                        setTrackingEmail(parentEmail); // Set the parent's email in the tracking email input
-                    }
-                    // Your existing logic to show the next section
-                    document.querySelectorAll('.form-section').forEach(section => section.classList.remove('active'));
-                    document.getElementById(sectionId).classList.add('active');
-                }
-                // Function to validate email format
-                function validateEmail(email) {
-                    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    return re.test(String(email).toLowerCase());
-                }
-            </script>
-            
-            
-            <script>
-                // Define the showPrevSection function
-                function showPrevSection(sectionId) {
-                    // Hide the current section
-                    const currentSection = document.querySelector('.form-section.active');
-                    if (currentSection) {
-                        currentSection.classList.remove('active');
-                    }
-
-                    // Show the previous section
-                    const prevSection = document.getElementById(sectionId);
-                    if (prevSection) {
-                        prevSection.classList.add('active');
-                    }
-                }
-            </script>
-
-
-
-
-<!-- modal -->
-
-<script>
-    // Get the modal
-    var modal = document.getElementById("applyModal");
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("applyNowBtn");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementById("closeModal");
-
-    // When the user clicks the button, open the modal 
-    btn.onclick = function () {
-        modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-
-    // Your existing JavaScript functions go here
-</script>
-
-<!-- AOS JS -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init({
-        duration: 1200,  // Set animation duration
-    });
-</script>
+    </footer>
 
 
     <script>
-      let slideIndex = 0;
+        let slideIndex = 0;
         const slides = document.querySelectorAll('.slide');
 
         function showSlides() {
@@ -1793,41 +1330,41 @@ Fade In Of Modal
 
     <script>
         // Show the loader on page load
-            window.addEventListener("load", function () {
-                const loader = document.getElementById("loader");
-                loader.classList.remove("show-loader"); // Hide the loader when the page is loaded
+        window.addEventListener("load", function () {
+            const loader = document.getElementById("loader");
+            loader.classList.remove("show-loader"); // Hide the loader when the page is loaded
+        });
+
+        // Function to show the loader
+        function showLoader() {
+            const loader = document.getElementById("loader");
+            loader.classList.add("show-loader");
+        }
+
+        // Function to hide the loader
+        function hideLoader() {
+            const loader = document.getElementById("loader");
+            loader.classList.remove("show-loader");
+        }
+
+        // Add event listeners to all anchor links
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function (event) {
+                // Check if the link has a valid href
+                if (this.getAttribute('href')) {
+                    event.preventDefault(); // Prevent the default link behavior
+
+                    showLoader(); // Show the loader
+
+                    // Simulate loading time (e.g., fetching new content)
+                    setTimeout(() => {
+                        // After loading, navigate to the link's href
+                        window.location.href = this.getAttribute('href');
+                        hideLoader(); // Hide the loader after navigation
+                    }, 3000); // Adjust time as needed
+                }
             });
-
-            // Function to show the loader
-            function showLoader() {
-                const loader = document.getElementById("loader");
-                loader.classList.add("show-loader");
-            }
-
-            // Function to hide the loader
-            function hideLoader() {
-                const loader = document.getElementById("loader");
-                loader.classList.remove("show-loader");
-            }
-
-            // Add event listeners to all anchor links
-            document.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', function (event) {
-                    // Check if the link has a valid href
-                    if (this.getAttribute('href')) {
-                        event.preventDefault(); // Prevent the default link behavior
-
-                        showLoader(); // Show the loader
-
-                        // Simulate loading time (e.g., fetching new content)
-                        setTimeout(() => {
-                            // After loading, navigate to the link's href
-                            window.location.href = this.getAttribute('href');
-                            hideLoader(); // Hide the loader after navigation
-                        }, 3000); // Adjust time as needed
-                    }
-                });
-            });
+        });
 
     </script>
 
